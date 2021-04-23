@@ -14,7 +14,7 @@ function Constructor() {
 
 
     function selectSize(evt) {
-        const value = Number.parseInt(evt.target.value)
+        const value = Number.parseInt(evt.target.value);
         if (value === 35) {
             const newPrice = totalPrice + 50;
             setTotalPrice(newPrice);
@@ -42,7 +42,7 @@ function Constructor() {
             setTotalPrice(totalPrice - 29);
 
         } else {
-            setCheese(prevValue => [...prevValue, evt.target.value])
+            setCheese(prevValue => [...prevValue, evt.target.value]);
             setTotalPrice(totalPrice + 29);
         }
     }
@@ -55,7 +55,7 @@ function Constructor() {
             setGreens(newArray);
             setTotalPrice(totalPrice - 29);
         } else {
-            setGreens(prevValue => [...prevValue, evt.target.value])
+            setGreens(prevValue => [...prevValue, evt.target.value]);
             setTotalPrice(totalPrice + 29);
         }
     }
@@ -74,10 +74,10 @@ function Constructor() {
 
     }
 
-    function showOrder (evt) {
-        evt.preventDefault()
+    function showOrder(evt) {
+        evt.preventDefault();
         const order = cheese.concat(greens, meat);
-        setOrderItems(prevValue => [...prevValue, ...order.join(', ')])
+        setOrderItems(prevValue => [...prevValue, ...order.join(', ')]);
         setCheese([]);
         setGreens([]);
         setMeat([]);
@@ -118,7 +118,7 @@ function Constructor() {
                 </div>
                 <button type={'submit'}>Make order</button>
             </form>
-            <p>Your order: {orderItems}</p>
+            <p>Ingredients: {orderItems}</p>
             <p>Total Price: {totalPrice}</p>
         </div>
     );
