@@ -93,11 +93,13 @@ function Constructor() {
                     <input onChange={selectSize} type='radio' value={35} name='gender'/> 35cm
                 </div>
                 <div className={'constructor__block'}>
-                    <input onChange={selectDough} type='radio' defaultChecked value={'deep-dish'} name='dough'/> Deep-dish pizza
+                    <input onChange={selectDough} type='radio' defaultChecked value={'deep-dish'}
+                           name='dough'/> Deep-dish pizza
                     <input onChange={selectDough} type='radio' value={'thin-crust'} name='dough'/> Thin-crust pizza
                 </div>
                 <div className={'constructor__block'}>
-                    <input onChange={selectSauce} type='radio' defaultChecked value={'tomato'} name='dough'/> Tomato sauce
+                    <input onChange={selectSauce} type='radio' defaultChecked value={'tomato'} name='dough'/> Tomato
+                    sauce
                     <input onChange={selectSauce} type='radio' value={'white'} name='dough'/> White sauce
                     <input onChange={selectSauce} type='radio' value={'chilli'} name='dough'/> Chilli sauce
                 </div>
