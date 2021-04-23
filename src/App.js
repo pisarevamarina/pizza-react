@@ -1,3 +1,4 @@
+import React from 'react';
 import Constructor from './components/constructor/constructor';
 
 function App() {
