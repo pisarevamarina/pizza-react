@@ -1,10 +1,10 @@
 import React from 'react';
-import Constructor from './components/constructor/constructor';
+import { PizzaConstructor } from './PizzaConstructor';
 
 function App() {
   return (
     <div className="App">
-      <Constructor/>
+      <PizzaConstructor />
     </div>
   );
 }
