@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { calculatePrice } from './halpers/calculatePrice';
-import { getUpdatedToppingArray } from './halpers/getUpdatedToppingArray';
+import React, { useState } from 'react';
+import { calculatePrice } from './helpers/calculatePrice';
+import { getUpdatedToppingArray } from './helpers/getUpdatedToppingArray';
 
 export function PizzaConstructor() {
   const [size, setSize] = useState(30);
@@ -19,7 +19,7 @@ export function PizzaConstructor() {
   });
 
   function selectSize(evt) {
-    const value = Number.parseInt(evt.target.value);
+    const value = Number(evt.target.value);
     setSize(value);
   }
 
@@ -118,7 +118,7 @@ export function PizzaConstructor() {
               onChange={selectSauce}
               checked={sauce === 'tomato sauce'}
               type="radio"
-              value="tomato-sauce"
+              value="tomato sauce"
               name="sauce"
               id="tomato-sauce"
             />
@@ -256,7 +256,7 @@ export function PizzaConstructor() {
       </form>
       <p>
         Ingredients:
-        {orderItems}
+        {orderItems.join(', ')}
       </p>
       <p>
         Total Price:
