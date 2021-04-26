@@ -53,7 +53,7 @@ export function PizzaConstructor() {
 
   function showOrder(evt) {
     evt.preventDefault();
-    const order = cheese.concat(greens, meat);
+    const order = [...cheese, ...greens, ...meat];
     setOrderItems(order);
     resetState();
   }
@@ -255,12 +255,10 @@ export function PizzaConstructor() {
         <button type="submit">Make order</button>
       </form>
       <p>
-        Ingredients:
-        {orderItems.join(', ')}
+        {`Ingredients: ${orderItems.join(', ')}.`}
       </p>
       <p>
-        Total Price:
-        {totalPrice}
+        {`Total Price: ${totalPrice} rub.`}
       </p>
     </div>
   );
